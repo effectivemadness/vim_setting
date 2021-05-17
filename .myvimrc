@@ -1,0 +1,53 @@
+set nu
+syntax on
+"set mouse-=a
+set list listchars=tab:>-,trail:~,eol:$
+set encoding=UTF-8
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'airblade/vim-gitgutter'
+
+Plug 'dense-analysis/ale'
+
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
+
+Plug 'ryanoasis/vim-devicons'
+
+call plug#end()
+
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'tabline': {
+      \   'left': [ ['buffers'] ],
+      \   'right': [ ['close'] ]
+      \ },
+      \ 'component_expand': {
+      \   'buffers': 'lightline#bufferline#buffers'
+      \ },
+      \ 'component_type': {
+      \   'buffers': 'tabsel'
+      \ }
+      \ }
+
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
+
+"nerdtree"
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+
+let NERDTreeQuitOnOpen = 1
+
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
