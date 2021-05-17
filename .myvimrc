@@ -18,6 +18,10 @@ Plug 'mengelbrecht/lightline-bufferline'
 
 Plug 'ryanoasis/vim-devicons'
 
+Plug 'junegunn/rainbow_parentheses.vim'
+
+Plug 'Raimondi/delimitMate'
+
 call plug#end()
 
 let g:lightline = {
@@ -51,3 +55,10 @@ let NERDTreeQuitOnOpen = 1
 
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+
+" delimitMate
+let delimitMate_expand_cr=1
+
+" rainbow parentheses
+"autocmd VimEnter * RainbowParentheses!!
+
