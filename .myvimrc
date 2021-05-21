@@ -22,6 +22,8 @@ Plug 'junegunn/rainbow_parentheses.vim'
 
 Plug 'Raimondi/delimitMate'
 
+Plug 'pbondoer/vim-42header'
+
 call plug#end()
 
 let g:lightline = {
