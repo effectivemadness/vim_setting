@@ -1,8 +1,9 @@
 set nu
 syntax on
 "set mouse-=a
-set list listchars=tab:>-,trail:~,eol:$
+set list listchars=tab:›\ ,trail:⋅,eol:↵
 set encoding=UTF-8
+set list!
 
 call plug#begin('~/.vim/plugged')
 
