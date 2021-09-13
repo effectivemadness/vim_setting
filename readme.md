@@ -1,6 +1,6 @@
 # VIM setting file
 
-## on NVIM
+## on VIM
 
 + place .vimrc on ~/
 + get vim-plug as [this page says so](https://github.com/junegunn/vim-plug)
